@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="chat.css">
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.26.0/moment.min.js"></script>
+        <script src="chat.js"></script> 
+
+    </head>
+    <body>
+        <div id="enter"> 
+            <!-- form은 엔터칠 때 입력값이 주소로 넘어가도록 만듬.
+                onsubmit은 뭘하는 객체인지는 모르겠는데 return false하면 주소로 넘어가는게 안됌.
+                대신 chat.js onEneterNick함수 코드때문에 콘솔에 입력값(nick)은 뜸.  -->
+            <form onsubmit="onEnterNick(); return false">
+             닉네임 <input type="text" name="nick"><br>
+             방이름 <input type="text" name="room"> 
+            <input type="submit" value="입장">
+            </form>
+        </div>
+        <div id="chat-window" class="full-screen" style="display: none;">
+            <div class="chat-box">
+                <div class="message template"> 
+                    <img src="https://via.placeholder.com/30x30.png">
+                    <div class="text">메세지 내용<br></div> 
+                    <div class="time">YYYYMMDD HH:mm</div>
+                </div>
+            </div>
+            <div class="input-message">
+                <input type="text">
+            </div>
+            
+
+        </div>
+    </body>
+</html>

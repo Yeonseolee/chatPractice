@@ -1,0 +1,80 @@
+html, body {
+    margin: 0px;
+    height: 100%;
+}
+
+.full-screen {
+    height: 100%;
+    position: relative;
+}
+
+.chat-box {
+    height: 100%;
+    width: 100%;
+    background-color: bisque;
+    overflow: scroll;
+}
+
+.input-message {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid black;
+}
+
+.input-message > input {
+    width: 98%;
+    border: 0px;
+
+}
+
+.message {
+    width: 100%;
+    padding-top: 5px;
+}
+
+.message > img {
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    float: left;
+}
+
+.message > .text {
+    background-color: white;
+    float: left;
+    width: 50%;
+    padding: 5px;
+    border-radius: 0.5rem;
+}
+
+.message > .time {
+    font-size: x-small;
+    clear: both;
+    width: 100%;
+    text-align: right;
+}
+
+.chat-box > .message:last-child {
+    margin-bottom: 30px;
+}
+
+.chat-box > .message.system > img {
+    display: none;
+} 
+
+
+.template {
+    display: none;
+}
+
+.chat-box > .message.self > img {
+    display:none;
+}
+
+.message.self > .text {
+    float: right;
+}
+
+
